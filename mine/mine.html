@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>扫雷</title>
+    <script src="mine.js"></script>
+    <!--[if IE]><script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../default.css" /> 
+</head>
+
+<body>
+<a href="/">back</a>
+<div>
+    <p>
+    <audio id="tickaudio" src="tick.ogg" >不支持audio</audio>
+    <audio id="winaudio" src="win.ogg"></audio>
+    <audio id="bombaudio" src="bomb.ogg"></audio>
+    <button id="help">help</button>
+    难度:
+    <select id="difficulty">
+        <option value="easy" selected>easy</option>
+        <option value="middle">middle</option>
+        <option value="hard">hard</option>
+    </select>
+    <button id="togglerecord">我的记录</button>
+    <button id="screenshot">截屏</button>
+    </p>
+    <canvas id="world">你的浏览器不支持，请选择使用chrome浏览器</canvas>
+</div>
+    <p id="controls" style="display: none;">控制键:左键打开，右键标记，中键尝试自动打开</p>
+    <p id="record"></p>
+    <pre id="debuginfo"></pre>
+</body>
+</html>
+

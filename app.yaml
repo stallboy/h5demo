@@ -1,0 +1,47 @@
+application: xsdemohtml5
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /soko
+  static_dir: soko
+
+- url: /mine
+  static_dir: mine
+
+- url: /llk
+  static_dir: llk
+
+- url: /xq
+  static_dir: xq
+
+- url: /life
+  static_dir: life
+
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /guestbook.*
+  script: guestbook.py
+
+- url: /talk
+  script: talk.py
+
+- url: /user
+  script: user.py
+
+- url: /(.*\.(png|jpg|html|css))
+  static_files: \1 
+  upload: .*\.(png|jpg|html|css)
+
+- url: /shell/
+  static_dir: shell
+
+- url: /shell.*
+  script: shell.py
+
+- url: /stock
+  static_dir: stock
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>连连看</title>
+    <script src="llk.js"></script>
+    <link rel="stylesheet" type="text/css" href="../default.css" /> 
+</head>
+
+<body>
+<a href="/">back</a>
+<div>
+    <p>
+    难度:
+    <select id="difficulty">
+        <option value="veryeasy">veryeasy</option>
+        <option value="easy" selected>easy</option>
+        <option value="middle">middle</option>
+        <option value="hard">hard</option>
+        <option value="extrahard">extrahard</option>
+    </select>
+    图案:
+    <select id="tile">
+        <option value="tile.png" selected>方块</option>
+        <option value="countryflag.png">国旗</option>
+    </select>
+    模式:
+    <select id="mode">
+        <option value="default" selected>不变化</option>
+        <option value="down">向下</option>
+        <option value="left">向左</option>
+        <option value="updown">上下分离</option>
+        <option value="leftright">左右分离</option>
+        <option value="downup">上下集中</option>
+        <option value="rightleft">左右集中</option>
+        <option value="szxy">上左下右</option>
+        <option value="zxys">左下右上</option>
+    </select>
+    <button id="restart">重新开始</button>
+    <button id="tip">提示一下</button>
+    <button id="refresh">刷新局面</button>
+    <button id="togglerecord">我的记录</button>
+    <button id="screenshot">截屏</button>
+    </p>
+    <canvas id="world">你的浏览器不支持，请选择使用chrome浏览器</canvas>
+</div>
+<p id="record"></p>
+<pre id="debuginfo"></pre>
+</body>
+</html>
+

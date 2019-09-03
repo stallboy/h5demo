@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>生命游戏</title>
+    <script src="life.js"></script>
+    <link rel="stylesheet" type="text/css" href="../default.css" /> 
+</head>
+
+<body>
+
+<a href="/">back</a>
+<div>
+    <p>
+    earth:
+    <select id="earth">
+    <option value="squre" >squre</option>
+    <option value="round" selected>round</option>
+    </select>
+    dense:<input id="dense" size="2" value="30"/>
+    <button id="restart">rand</button>
+    <button id="step">step</button>
+    <button id="start">start</button>
+    <select id="speed">
+    <option value="slow">slow</option>
+    <option value="high">high</option>
+    <option value="veryhigh" selected>veryhigh</option>
+    </select>
+    <button id="screenshot">截屏</button>
+    generations:<span id="gen"></span>
+    </p>
+    <canvas id="world">你的浏览器不支持，请选择使用chrome浏览器</canvas>
+</div>
+<pre id="debuginfo"></pre>
+</body>
+</html>
+

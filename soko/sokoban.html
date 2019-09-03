@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>推箱子</title>
+    <script src="sokoban.js"></script>
+    <link rel="stylesheet" type="text/css" href="/default.css" /> 
+</head>
+
+<body>
+<a href="/">back</a>
+<div>
+    <p>
+    <audio id="boxmanaudio" src="boxman.ogg" >不支持audio</audio>
+    <audio id="winaudio" src="win.ogg"></audio>
+    <button id="help">help</button>
+    <button id="togglesolutions">过关记录</button>
+    <button id="screenshot">截屏</button>
+    当前关卡:<b id="curlevel"></b>&nbsp;
+    移动数:<span id="movecnt"></span>
+    </p>
+    <canvas id="world">你的浏览器不支持，请选择使用chrome浏览器</canvas>
+</div>
+    <p id="controls" style="display: none;">controls: arrow: move, delete: undo, home: restart. m: toggle music</p>
+    <p id="moves"></p>
+    <p id="solutions"></p>
+    <pre id="debuginfo"></pre>
+ </body>
+ </html>
+

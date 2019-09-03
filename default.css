@@ -1,0 +1,17 @@
+body{
+    font-size: 14px;
+    color: #888;
+    background-color: #010c12;
+}
+a{ color: #999; }
+canvas {
+    border: 6px #222 solid;
+}
+select,button {
+    color: #888;
+    background-color: #222;
+    border-color: #333;
+}
+div, #debuginfo{
+    padding-top: 20px;
+}

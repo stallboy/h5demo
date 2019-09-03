@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>股票估值</title>
+    <script src="stock.js"></script>
+    <style>
+        body{ margin: 0;}
+        p{ margin: 5px;}
+        fieldset{
+            border-style: none;
+        }
+        fieldset ol{ list-style: none;
+            line-height: 1.5; 
+            margin: 0;
+            padding: 0;
+        }
+        fieldset legend{
+            font-size: 150%;
+            padding-bottom: 10px;
+        }
+        fieldset ol li{ 
+            margin: 0 0 10px; 
+            clear: both;
+        }
+        fieldset ol li label{  
+            display: block; 
+            float: left;
+            margin-right: 10px;
+            text-align: right;
+            width: 220px;
+        }
+        fieldset ol li label:after{ content: ':'; }
+        fieldset ol li input{ width: 250px; background: #eee; }
+        fieldset ol li input:focus { background: #fff; }
+        fieldset ol li button{ margin-left: 150px; font-size: 150%; }
+        .evalres { margin-left: 10px; font-size: 150%; color: red; }
+    </style>
+</head>
+
+<body>
+<a href="/">back</a>
+<div>
+    <p>这个是我自己想的简单的估值模型</p>
+    <p>理论假设： 股票的价值等于它<b>未来每股净资产</b>的折现值。</p>
+    <p>即假设公司维持增长N年后不再能提供额外回报（即N年后市净率为1，净资产增长率和折现率相同）</p>
+    <p>(折现率等于货币的时间价值加上风险溢价。利息率增加时折现率要相应增加，晨星用10.5%做为一般水平公司的折现率，低风险公司如强生公司，沃尔玛公司为9%，高风险公司
+    折现率为13-15%)</p>
+    <fieldset>
+    <ol>
+        <li><label for="bvps1"> 每股净资产</label> <input id="bvps1"> </li>
+        <li><label for="roe1"> 净资产增长率</label> <input id="roe1"> </li>
+        <li><label for="year1"> 维持年数</label> <input id="year1" value="10"> </li>
+        <li><label for="dr1"> 折现率</label> <input id="dr1" value="10"> </li>
+        <li><button id="eval1">估值</button> <span class="evalres" id="res1">  </span></li>
+    </ol>
+    </fieldset>
+</div>
+
+<div>
+    <p>晨星估值模型（来自《股市真规则》）</p>
+    <p>理论假设: 股票的价值等于它<b>未来现金流</b>的折现值。</p>
+    <p>这里是假设企业永续经营，维持自由现金流快速增长N年后，增长率下降然后一直维持到永远。</p>
+    <p>(书中永续年金增增长率不好理解，其实就是这里的N年后自由现金流增长率。需要注意下一年度的每股自由现金流不是现在的需预测下)
+    <fieldset>
+    <ol>
+        <li><label for="fcfps">下一年度每股自由现金流</label> <input id="fcfps"> </li>
+        <li><label for="rofcf"> 自由现金流年增长率</label> <input id="rofcf"> </li>
+        <li><label for="year2"> 维持N年</label> <input id="year2" value="10"> </li>
+        <li><label for="rofcfafter"> N年后自由现金流年增长率</label> <input id="rofcfafter" value="3"> </li>
+        <li><label for="dr2"> 折现率</label> <input id="dr2" value="10"> </li>
+        <li><button id="eval2">估值</button> <span class="evalres" id="res2">  </span></li>
+    </ol>
+    </fieldset>
+</div>
+
+
+</body>
+</html>
+
