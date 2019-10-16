@@ -28,8 +28,9 @@ var sokoban = function(){
     tileindexs[tiletypes.MAN] = 6; 
     tileindexs[tiletypes.MANATDEST] = 7; 
 
-    var keytypes = { 37: 'l', 38: 'u', 39: 'r', 40: 'd', 
-        46: 'b', 77: 'm',  65: 'a', 36: 'home' };
+    var keytypes = { "KeyA": 'l', "ArrowLeft": 'l', "KeyW": 'u', "ArrowUp": 'u', 
+		"KeyD": 'r', "ArrowRight": 'r', "KeyS": 'd', "ArrowDown": 'd',
+        "KeyB": 'b', "KeyM": 'm', "KeyR": 'r'};
 
     var heroMove = "";
     var bShowHeroMove = false;
@@ -72,6 +73,11 @@ var sokoban = function(){
         for (var i=0; i<mapstr.length; i++){
             if (mapstr[i] == '\r'){
                 i++;
+                row++;
+                col=0;
+                continue;
+            }
+			if (mapstr[i] == '\n'){
                 row++;
                 col=0;
                 continue;
@@ -292,7 +298,7 @@ var sokoban = function(){
             return;
         }
         
-        var key = keytypes[event.keyCode];
+        var key = keytypes[event.code];
         //debug(event.keyCode + '-' + key);
         var moveable;
         var undoable;
@@ -318,9 +324,7 @@ var sokoban = function(){
                 }
             }else if (key === 'm'){
                 toggleMusic();
-            }else if (key === 'a'){
-                toggleSolutions();
-            }else if (key === 'home'){
+            }else if (key === 'r'){
                 if (curLevel){
                     startLevel(curLevel);
                 }
