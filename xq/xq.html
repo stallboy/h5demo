@@ -6,7 +6,7 @@
     <script src="xqcfg.js"></script>
     <script src="xqpos.js"></script>
     <script src="xq.js"></script>
-    <link rel="stylesheet" type="text/css" href="../default.css" /> 
+    <link rel="stylesheet" type="text/css" href="../default.css"/>
 </head>
 
 <body>
@@ -14,26 +14,29 @@
 <a href="/">back</a>
 <div>
     <p>
-    模式:
-    <select id="mode">
-    <option value="PvPonOneComputer">单个电脑上PVP</option>
-    <option value="PvAI" selected>挑战电脑</option>
-    <option value="PvP">联网PVP</option>
+        <label for="mode">模式：</label> <select id="mode">
+        <option value="PvPonOneComputer">单个电脑上PVP</option>
+        <option value="PvAI" selected>挑战电脑</option>
+        <option value="PvP">联网PVP</option>
     </select>
-    <span id="diff" >
-    难度:
-    <select id="difficulty">
+        <span id="diff">
+    <label for="difficulty">难度：</label><select id="difficulty">
     </select>
     </span>
-    <button id="restart">重新开始</button>
-    <button id="undo">悔棋</button>
-    <button id="screenshot">截屏</button>
+        <button id="restart">重新开始</button>
+        <button id="undo">悔棋</button>
+        <button id="screenshot">截屏</button>
     </p>
     <div style="display: flex">
-		<canvas style="margin: 0 auto" id="world">你的浏览器不支持，请选择使用chrome浏览器</canvas>
-	</div>
+        <canvas style="margin: 0 auto" id="world">你的浏览器不支持，请选择使用chrome浏览器</canvas>
+    </div>
 </div>
 <pre id="debuginfo"></pre>
+
+<img id="img_xq" src="/xq/xq.png" alt="xq" hidden/>
+<img id="img_board" src="/xq/board.png" alt="board" hidden/>
+
+
 </body>
 </html>
 

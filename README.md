@@ -1,22 +1,18 @@
 # h5demo
- html5 game demo 
+html5 game demo 
  
- 推箱子
- 
-<img src="sokoban.png" alt="sokoban">
+推箱子
 
+![](sokoban.png)
 
 中国象棋
 
-<img src="xq.png" alt="xq">
-
+![](xq.png)
 
 扫雷
 
-<img src="mine.png" alt="mine">
-
+![](mine.png)
 
 连连看
 
-<img src="llk.png" alt="llk">
-
+![](llk.png)

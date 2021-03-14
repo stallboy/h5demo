@@ -1,4 +1,4 @@
-var xqCfg = {
+const xqCfg = {
     KING: 0,
     ADVISOR: 1,
     ELEPHANT: 2,
